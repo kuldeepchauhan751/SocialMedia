@@ -1,0 +1,10 @@
+<p>
+  <strong>Comment:</strong>
+  <%= comment.cbody %>
+<p></p>
+  <%= link_to 'delete', [comment.post, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %> | 
+               
+<%= link_to 'edit' , edit_post_comment_path(comment.post,comment) %>
+</p>
