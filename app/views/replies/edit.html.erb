@@ -1,0 +1,12 @@
+<h1>Edit Reply</h1>
+ 
+<%= form_for([@post, @comment,@reply]) do |f| %>
+  <p>
+    <%= f.label :reply %><br>
+    <%= f.text_area :rbody %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<body style="background-color:rgb(100,150,150)"></body>

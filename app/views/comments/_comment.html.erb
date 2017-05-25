@@ -1,10 +1,26 @@
 <p>
-  <strong>Comment:</strong>
-  <%= comment.cbody %>
-<p></p>
-  <%= link_to 'delete', [comment.post, comment],
+  		<strong>Comment:</strong>
+	    <%= comment.cbody %>
+		
+
+<p>
+    	<% comment.replies.each do |reply| %>
+  		<p></p><b><i>Reply:</i></b>
+  		<%= reply.rbody %>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 		<%= link_to 'Edit' , edit_post_comment_reply_path(reply.comment.post,reply.comment,reply) %> |
+		<%= link_to 'Delete', post_comment_reply_path(reply.comment.post,reply.comment,reply), method: :delete, data: { confirm: 'Are you sure?' } %> 	 
+</p>
+		<% end %>
+
+		<%= link_to 'Reply Comment' , new_post_comment_reply_path(comment.post,comment) %> |
+  		<%= link_to 'Delete Comment', [comment.post, comment],
                method: :delete,
                data: { confirm: 'Are you sure?' } %> | 
                
-<%= link_to 'edit' , edit_post_comment_path(comment.post,comment) %>
+		<%= link_to 'Edit Comment' , edit_post_comment_path(comment.post,comment) %> 
+
+
+
 </p>
+		<body style="background-color:rgb(200,200,200)"></body>

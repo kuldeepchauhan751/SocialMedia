@@ -1,0 +1,16 @@
+
+<strong>Reply:</strong>
+
+
+<%= form_for @reply ,url: post_comment_replies_path do |f| %>
+  <p>
+    
+    <%= f.text_field :rbody %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+<body style="background-color:rgb(195,200,150)"></body>

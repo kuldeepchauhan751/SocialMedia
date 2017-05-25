@@ -1,24 +1,27 @@
-
+<%= link_to '<<Back', posts_path %>
  
-
+<body style="background-color:rgb(255,222,222)"></body>   
 <p>
-  <strong>Post:</strong><br>
+  <h2>Post:</h2>
   <%= @post.pbody %>
 </p>
 
 
-<%= link_to 'Edit Post', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<p>
+	
+</p>
 
-
-<h2>Comments</h2>
+<p>
 <%= render @post.comments %>
 
 
+</p>
+
+<p>
 
 
-<h2>Add a comment:</h2>
+<strong>Add a comment:</strong>
 	<%= render 'comments/form' %>
  
-
-
+</p>
+                                                                                                                                                                            
